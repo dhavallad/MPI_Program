@@ -29,11 +29,3 @@ int main (int argc, char *argv[]){
 	
 	MPI_Finalize();
 }
-	
-
-
-d (&outmsg, 1, MPI CHAR, dest, tag, MPI COMM WORLD)
-	rc MPI Get count (&Stat, MPI CHAR, &count)
-	printf ("Task td: Received td char (s) from task td with tag td In",
-	rank, count, Stat. MPI SOURCE, Stat. MPI TAG)
-}
