@@ -1,3 +1,4 @@
+/* LAB 8 */
 #include <stdio.h>
 #include "mpi.h"
 
