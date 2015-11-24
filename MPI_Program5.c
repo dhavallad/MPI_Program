@@ -25,8 +25,11 @@ main (int argc, char *argv[]){
 	MPI_Isend (&rank,1,MPI_INT,prev,tag2,MPI_COMM_WORLD,&reqs[2]);
 	MPI_Isend (&rank,1,MPI_INT,next,tag1,MPI_COMM_WORLD,&reqs[3]);
 	//do some work
-
-
 	MPI_Waitall (4, reqs, stats);
+	for(i=0;i<2;i++){
+		// 2 sends
+		printf("Task %d: Received from task %d with tag %d \n",
+		rank, stats[i].MPI_SOURCE, stats[i].MPI_TAG);
+	}
 	MPI_Finalize();
 }
