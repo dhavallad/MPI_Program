@@ -12,9 +12,9 @@ int main(int argc, char *argv[]){
 	MPI_Comm_rank(MPI_COMM_WORLD,&rank);
 	// For fibonaaci series calcualtion set master input 1.
 	if(rank == 0)
-	input = 1; 
+		input = 1; 
 	else
-	input = rank;
+		input = rank;
 	MPI_Scan (&input,&output,1,MPI_INT,MPI_SUM,MPI_COMM_WORLD);
 	printf("Process#%d: Fibonaaci Sum %d\n",rank,output);
 	MPI_Finalize();
